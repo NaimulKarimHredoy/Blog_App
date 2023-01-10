@@ -100,29 +100,6 @@ const HomeScreen = (props) => {
           </Card>
           <ActivityIndicator size="large" color="red" animating={loading} />
 
-          <FlatList
-            data={posts}
-            renderItem={({ item }) => {
-              return (
-                  <PostCard 
-                  navigateToComment={(id, comments, uid) => {
-                    props.navigation.navigate("CommentScreen",{
-                      postId: id,
-                      comments : comments,
-                      userId: uid
-                    });
-                  }}
-                  author={item.data.author}
-                  postId={item.id}
-                  body={item.data.body}
-                  totalLikes= {item.likes}
-                  userId={item.data.userId}
-                  comments={item.data.comments}
-                  // item={item}
-                />
-              );
-            }}
-          />
         </View>
       )}
     </AuthContext.Consumer>
