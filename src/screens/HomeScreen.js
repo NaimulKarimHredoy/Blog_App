@@ -56,7 +56,6 @@ const HomeScreen = (props) => {
   return (
     <AuthContext.Consumer>
       {(auth) => (
-        // setUid(auth.CurrentUser.uid)
         <View style={styles.viewStyle}>
           <HeaderHome
             DrawerFunction={() => {
@@ -105,13 +104,6 @@ const HomeScreen = (props) => {
             renderItem={({ item }) => {
               return (
                   <PostCard 
-                  navigateToComment={(id, comments, uid) => {
-                    props.navigation.navigate("CommentScreen",{
-                      postId: id,
-                      comments : comments,
-                      userId: uid
-                    });
-                  }}
                   author={item.data.author}
                   postId={item.id}
                   body={item.data.body}
