@@ -24,7 +24,7 @@ const HomeScreen = (props) => {
   const [posts, setPosts] = useState([]);
   const [loading, setLoading] = useState(false);
   const [input, setInput] = useState("");
- 
+
   const loadPosts = async () => {
     console.log('fn callded')
     setLoading(true);
@@ -56,6 +56,7 @@ const HomeScreen = (props) => {
   return (
     <AuthContext.Consumer>
       {(auth) => (
+        // setUid(auth.CurrentUser.uid)
         <View style={styles.viewStyle}>
           <HeaderHome
             DrawerFunction={() => {
@@ -103,14 +104,21 @@ const HomeScreen = (props) => {
             data={posts}
             renderItem={({ item }) => {
               return (
-                  <PostCard 
+                <PostCard
+                  navigateToComment={(id, comments, uid) => {
+                    props.navigation.navigate("CommentScreen", {
+                      postId: id,
+                      comments: comments,
+                      userId: uid
+                    });
+                  }}
                   author={item.data.author}
                   postId={item.id}
                   body={item.data.body}
-                  totalLikes= {item.likes}
+                  totalLikes={item.likes}
                   userId={item.data.userId}
                   comments={item.data.comments}
-                  // item={item}
+                // item={item}
                 />
               );
             }}
