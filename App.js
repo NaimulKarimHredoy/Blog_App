@@ -6,13 +6,12 @@ import { AuthContext, AuthProvider } from "./src/providers/AuthProvider";
 import * as firebase from "firebase";
 
 const firebaseConfig = {
-  apiKey: "AIzaSyDbuwrX7JlJtVdKiInu6Fh8mKYHs8dxOck",
-  authDomain: "blog-native-d6293.firebaseapp.com",
-  databaseURL: "https://blog-native-d6293-default-rtdb.firebaseio.com/",
-  projectId: "blog-native-d6293",
-  storageBucket: "blog-native-d6293.appspot.com",
-  messagingSenderId: "139133121860",
-  appId: "1:139133121860:web:60562a0f98dacad90a9311"
+  apiKey: "AIzaSyDIyjXj18DxKg7JFP222XVDK6fUqILHEXI",
+  authDomain: "blog-app-2f3dd.firebaseapp.com",
+  projectId: "blog-app-2f3dd",
+  storageBucket: "blog-app-2f3dd.appspot.com",
+  messagingSenderId: "20033954884",
+  appId: "1:20033954884:web:fa6e1254cf88e95b22c811"
 };
 if (!firebase.apps.length) {
   firebase.initializeApp(firebaseConfig);
