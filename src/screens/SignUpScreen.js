@@ -17,25 +17,31 @@ const SignUpScreen = (props) => {
   } else {
     return (
       <View style={styles.viewStyle}>
-        <Card>
-          <Card.Title>Welcome to My Blog!</Card.Title>
+        <Card wrapperStyle={{backgroundColor: "#454545", padding: 20}}>
+          <Card.Title  style={{color: "white"}}>Welcome to Blog App!</Card.Title>
           <Card.Divider />
           <Input
-            leftIcon={<Ionicons name="ios-person" size={24} color="black" />}
+
+            style={{color: "white"}}
+            leftIcon={<Ionicons name="ios-person" size={24} color="white" />}
             placeholder="Name"
             onChangeText={function (currentInput) {
               setName(currentInput);
             }}
           />
           <Input
-            leftIcon={<Ionicons name="ios-school" size={24} color="black" />}
+
+style={{color: "white"}}
+            leftIcon={<Ionicons name="ios-school" size={24} color="white" />}
             placeholder="Student ID"
             onChangeText={function (currentInput) {
               setSID(currentInput);
             }}
           />
           <Input
-            leftIcon={<FontAwesome name="envelope" size={24} color="black" />}
+
+style={{color: "white"}}
+            leftIcon={<FontAwesome name="envelope" size={24} color="white" />}
             placeholder="E-mail Address"
             onChangeText={function (currentInput) {
               setEmail(currentInput);
@@ -43,8 +49,10 @@ const SignUpScreen = (props) => {
           />
 
           <Input
+
+style={{color: "white"}}
             placeholder="Password"
-            leftIcon={<Feather name="key" size={24} color="black" />}
+            leftIcon={<Feather name="key" size={24} color="white" />}
             secureTextEntry={true}
             onChangeText={function (currentInput) {
               setPassword(currentInput);
@@ -109,7 +117,7 @@ const styles = StyleSheet.create({
   viewStyle: {
     flex: 1,
     justifyContent: "center",
-    backgroundColor: "#4bacb8",
+    backgroundColor: "skyblue",
   },
 });
 export default SignUpScreen;

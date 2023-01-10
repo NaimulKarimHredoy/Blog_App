@@ -16,13 +16,14 @@ const SignInScreen = (props) => {
       <AuthContext.Consumer>
         {(auth) => (
           <View style={styles.viewStyle}>
-            <Card>
-              <Card.Title>Welcome to My Blog!</Card.Title>
+            <Card wrapperStyle={{backgroundColor: "#454545", padding: 25}}>
+              <Card.Title style={{color: "white", fontSize: 18}}>- LET'S SHARE YOUR EXPERIENCE -</Card.Title>
               <Card.Divider />
               <Input
                 leftIcon={
-                  <FontAwesome name="envelope" size={24} color="black" />
+                  <FontAwesome name="envelope" size={24} color="white" />
                 }
+                style={{color: "white"}}
                 placeholder="E-mail Address"
                 onChangeText={function (currentInput) {
                   setEmail(currentInput);
@@ -30,8 +31,9 @@ const SignInScreen = (props) => {
               />
 
               <Input
+                style={{color: "white"}}
                 placeholder="Password"
-                leftIcon={<Feather name="key" size={24} color="black" />}
+                leftIcon={<Feather name="key" size={24} color="white" />}
                 secureTextEntry={true}
                 onChangeText={function (currentInput) {
                   setPassword(currentInput);
@@ -39,7 +41,7 @@ const SignInScreen = (props) => {
               />
 
               <Button
-                icon={<AntDesign name="login" size={24} color="white" />}
+                icon={<AntDesign name="login" size={24} color="white"/>}
                 title="  Sign In!"
                 type="solid"
                 onPress={() => {
@@ -60,7 +62,7 @@ const SignInScreen = (props) => {
               />
               <Button
                 type="clear"
-                icon={<AntDesign name="user" size={24} color="dodgerblue" />}
+                icon={<AntDesign name="user" size={24} color="dodgerblue"/>}
                 title="  Don't have an account?"
                 onPress={function () {
                   props.navigation.navigate("SignUp");
@@ -78,7 +80,7 @@ const styles = StyleSheet.create({
   viewStyle: {
     flex: 1,
     justifyContent: "center",
-    backgroundColor: "#4bacb8",
+    backgroundColor: "skyblue",
   },
 });
 export default SignInScreen;

@@ -20,7 +20,7 @@ const PostCard = (props) => {
             }}
           >
             <Avatar
-              containerStyle={{ backgroundColor: "#ffab91" }}
+              containerStyle={{ backgroundColor: "orange" }}
               rounded
               icon={{ name: "user", type: "font-awesome", color: "black" }}
               activeOpacity={1}

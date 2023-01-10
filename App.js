@@ -8,6 +8,7 @@ import * as firebase from "firebase";
 const firebaseConfig = {
   apiKey: "AIzaSyDIyjXj18DxKg7JFP222XVDK6fUqILHEXI",
   authDomain: "blog-app-2f3dd.firebaseapp.com",
+  databaseURL: "https://blog-app-2f3dd-default-rtdb.firebaseio.com/",
   projectId: "blog-app-2f3dd",
   storageBucket: "blog-app-2f3dd.appspot.com",
   messagingSenderId: "20033954884",
