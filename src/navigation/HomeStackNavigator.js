@@ -12,6 +12,13 @@ const HomeStackNavigator = () => {
             component={HomeScreen}
             options={{headerShown: false}}
         />
+
+    <Stack.Screen
+            name="CommentScreen"
+            component={CommentScreen}
+            // options={{headerShown: false}}
+            
+        />
     </Stack.Navigator>
   )
 }

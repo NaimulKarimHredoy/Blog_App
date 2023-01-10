@@ -6,6 +6,9 @@ import { AuthContext } from "../providers/AuthProvider";
 
 
 const PostCard = (props) => {
+  // console.log(props.comments[0].comment + "----propsssss")'
+
+  const commentCounter = props.comments;
   return (
     <AuthContext.Consumer>
       {(auth) => (
@@ -44,7 +47,12 @@ const PostCard = (props) => {
 
             <Button
               type="solid"
-              title="Comment (10)"
+              // title="Comment (10)"
+              title={`comment (${commentCounter.length})`}
+              onPress={() => {
+                props.navigateToComment(props.postId, props.comments, auth.CurrentUser.uid);
+              }}
+            // onPress={props.navigateToComment}
             />
           </View>
         </Card>
